@@ -225,7 +225,7 @@ export async function getPostsBefore(date: string, pageSize: number = 10) {
   }
 
   const params = {
-    database_id: DATABASE_ID,
+    database_id: 59c94c820b6e4bf096eb82a958d26445,
     filter: _buildFilter([
       {
         property: 'Date',
@@ -721,6 +721,7 @@ function _buildFilter(conditions = []) {
   }
 
   return {
+<<<<<<< HEAD
     and: _uniqueContions(
       conditions.concat([
         {
@@ -752,6 +753,25 @@ function _uniqueContions(conditions = []) {
   })
 }
 
+=======
+    and: conditions.concat([
+      {
+        property: 'Published',
+        checkbox: {
+          equals: true,
+        },
+      },
+      {
+        property: 'Date',
+        date: {
+          on_or_before: new Date().toISOString(),
+        },
+      },
+    ]),
+  }
+}
+
+>>>>>>> 7240f71 (Enable to preview posts in development)
 function _validPost(data) {
   const prop = data.properties
   return prop.Page.title.length > 0 && prop.Slug.rich_text.length > 0
