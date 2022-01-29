@@ -721,7 +721,6 @@ function _buildFilter(conditions = []) {
   }
 
   return {
-<<<<<<< HEAD
     and: _uniqueContions(
       conditions.concat([
         {
@@ -753,7 +752,6 @@ function _uniqueContions(conditions = []) {
   })
 }
 
-=======
     and: conditions.concat([
       {
         property: 'Published',
@@ -771,7 +769,6 @@ function _uniqueContions(conditions = []) {
   }
 }
 
->>>>>>> 7240f71 (Enable to preview posts in development)
 function _validPost(data) {
   const prop = data.properties
   return prop.Page.title.length > 0 && prop.Slug.rich_text.length > 0
