@@ -752,6 +752,23 @@ function _uniqueContions(conditions = []) {
   })
 }
 
+    and: conditions.concat([
+      {
+        property: 'Published',
+        checkbox: {
+          equals: true,
+        },
+      },
+      {
+        property: 'Date',
+        date: {
+          on_or_before: new Date().toISOString(),
+        },
+      },
+    ]),
+  }
+}
+
 function _validPost(data) {
   const prop = data.properties
   return prop.Page.title.length > 0 && prop.Slug.rich_text.length > 0
