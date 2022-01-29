@@ -10,7 +10,7 @@ const RenderPage = () => (
         <p>
           easy-notion-blog powered by{' '}
           <ExtLink href="https://github.com/otoyo/easy-notion-blog">
-            otoyo/easy-notion-blog
+            otoyo/easy-notion-blogaaa
           </ExtLink>
         </p>
       </div>
