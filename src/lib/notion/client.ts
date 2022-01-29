@@ -225,7 +225,7 @@ export async function getPostsBefore(date: string, pageSize: number = 10) {
   }
 
   const params = {
-    database_id: 59c94c820b6e4bf096eb82a958d26445,
+    database_id: DATABASE_ID,
     filter: _buildFilter([
       {
         property: 'Date',
